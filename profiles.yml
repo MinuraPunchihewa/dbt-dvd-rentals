@@ -1,0 +1,23 @@
+config:
+    use_colors: True 
+postgres:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: dbt
+      pass: password123
+      dbname: dvd_rental
+      schema: dev
+    prod:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: dbt
+      pass: password123
+      dbname: dvd_rental
+      schema: analytics
+  target: prod 
